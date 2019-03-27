@@ -1,4 +1,7 @@
 # You're here
+
+[anthonybronkema.com](https://www.anthonybronkema.com) is the live site.
+
 Thanks for visiting. This is new. There will be a lot of updates. 
 
 If you're here to provide feedback, please use the Issues so I can track my progress. 
