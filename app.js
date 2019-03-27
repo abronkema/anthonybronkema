@@ -11,6 +11,7 @@ const twitter = "twitter/anthonybronkema"
 
 // TODO: Refactor the follow into a non-repeatable function
 // TODO: headerNameAltText update should trigger when the background color appears. 
+// TODO: add email address
 
 headerIconCode.addEventListener('mouseenter', function(e) {
     headerNamePrimary.classList.toggle('hide');
