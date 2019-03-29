@@ -14,6 +14,6 @@ I'm really interested in specific feedback about:
 - markup errors or improvements
 - anything JavaScript. I have tons to learn here.
 
-Feel free to leave it in issues (along with actual issues) on GitHub, Twitter (DM or @), or on my site's form.
+Feel free to leave it in [issues](https://github.com/anthonybronkema/anthonybronkema/issues) (along with actual issues) on GitHub, [Twitter](https://www.twitter.com/anthonybronkema) (DM or @), or on my site's form.
 
 Thanks in advance!
