@@ -1,8 +1,5 @@
 const headerNamePrimary = document.querySelector('.header-name__primary');
 const headerNameAlt = document.querySelector('.header-name__alt');
-const github = "github/anthonybronkema";
-const mail = "email me";
-const twitter = "twitter/anthonybronkema"
 const allIcons = document.querySelectorAll('.icon');
 
 const resetHeaderNamePrimary = function() {
@@ -12,17 +9,22 @@ const resetHeaderNamePrimary = function() {
 
 const setAlternateText = function(event) {
     if (event.target.id === "code") {
-        headerNameAlt.innerHTML = github;
+        headerNameAlt.innerHTML = "github/anthonybronkema";
     }
     if (event.target.id === "mail") {
-        headerNameAlt.innerHTML = mail;
+        headerNameAlt.innerHTML = "send your feedback";
 }
     if (event.target.id === "twitter") {
-    headerNameAlt.innerHTML = twitter;
+    headerNameAlt.innerHTML = "twitter/anthonybronkema";
 };
 };
 
 allIcons.forEach(function(el) {
+    if (el.id == "mail") {
+        el.addEventListener('click', function(el) {
+            console.log(`You clicked ${el.target.id}`);
+        })
+    }
         el.addEventListener('mouseover', function(event) {
             resetHeaderNamePrimary();
             setAlternateText(event);
