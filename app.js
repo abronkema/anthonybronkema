@@ -1,41 +1,33 @@
-const headerIconCode = document.getElementById('code');
-const headerIconEmail = document.getElementById('mail');
-const headerIconTwitter = document.getElementById('twitter');
-const headerIcon = document.querySelector('.header-icons');
 const headerNamePrimary = document.querySelector('.header-name__primary');
 const headerNameAlt = document.querySelector('.header-name__alt');
-let headerNameAltText = headerNameAlt.innerHTML;
 const github = "github/anthonybronkema";
 const mail = "email me";
 const twitter = "twitter/anthonybronkema"
+const allIcons = document.querySelectorAll('.icon');
 
-// TODO: Refactor the follow into a non-repeatable function
-// TODO: headerNameAltText update should trigger when the background color appears. 
-// TODO: add email address
+const resetHeaderNamePrimary = function() {
+    headerNamePrimary.classList.toggle('hide');
+    headerNameAlt.innerHTML = "";
+}
 
-headerIconCode.addEventListener('mouseenter', function(e) {
-    headerNamePrimary.classList.toggle('hide');
-    headerNameAlt.innerHTML = github;
-})
-headerIconEmail.addEventListener('mouseenter', function(e) {
-    headerNamePrimary.classList.toggle('hide');
-    headerNameAlt.innerHTML = mail;
-})
-headerIconTwitter.addEventListener('mouseenter', function(e) {
-    headerNamePrimary.classList.toggle('hide');
+const setAlternateText = function(event) {
+    if (event.target.id === "code") {
+        headerNameAlt.innerHTML = github;
+    }
+    if (event.target.id === "mail") {
+        headerNameAlt.innerHTML = mail;
+}
+    if (event.target.id === "twitter") {
     headerNameAlt.innerHTML = twitter;
-})
+};
+};
 
-headerIconCode.addEventListener('mouseleave', function() {
-    headerNamePrimary.classList.toggle('hide');
-    headerNameAlt.innerHTML = "";
-})
-headerIconEmail.addEventListener('mouseleave', function() {
-    headerNamePrimary.classList.toggle('hide');
-    headerNameAlt.innerHTML = "";
-})
-headerIconTwitter.addEventListener('mouseleave', function() {
-    headerNamePrimary.classList.toggle('hide');
-    headerNameAlt.innerHTML = "";
-})
-
+allIcons.forEach(function(el) {
+        el.addEventListener('mouseover', function(event) {
+            resetHeaderNamePrimary();
+            setAlternateText(event);
+        });
+        el.addEventListener('mouseleave', function(event) {
+            resetHeaderNamePrimary();
+        });  
+});
