@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b687d44-c9ca-4f19-938b-db8e1fbc448f/deploy-status)](https://app.netlify.com/sites/elegant-archimedes-e85e2f/deploys)
+
 # You're here
 
 [anthonybronkema.com](https://www.anthonybronkema.com) is the live site.
