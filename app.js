@@ -9,13 +9,13 @@ const resetHeaderNamePrimary = function() {
 
 const setAlternateText = function(event) {
     if (event.target.id === "code") {
-        headerNameAlt.innerHTML = "github/anthonybronkema";
+        headerNameAlt.innerHTML = "github/abronkema";
     }
     if (event.target.id === "mail") {
         headerNameAlt.innerHTML = "send your feedback";
 }
     if (event.target.id === "twitter") {
-    headerNameAlt.innerHTML = "twitter/anthonybronkema";
+    headerNameAlt.innerHTML = "twitter/oh_hey_anthony";
 };
 };
 
