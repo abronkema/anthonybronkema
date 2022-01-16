@@ -1,10 +1,21 @@
 const headerNamePrimary = document.querySelector('.header-name__primary');
 const headerNameAlt = document.querySelector('.header-name__alt');
 const allIcons = document.querySelectorAll('.icon');
+const mailIcon = document.querySelector('#mail')
 
 const resetHeaderNamePrimary = function() {
     headerNamePrimary.classList.toggle('hide');
     headerNameAlt.innerHTML = "";
+}
+
+function copyTextToClipboard() {
+    var emailAddress = 'anthony.bronkema@gmail.com';
+    navigator.clipboard.writeText(emailAddress).then(function() {
+        // TODO: Make a banner to confirm clipboard copy
+        console.log('Clipboard copied!')
+    }, function() {
+        console.log('Clipboard failed to copy')
+    })
 }
 
 const setAlternateText = function(event) {
@@ -12,17 +23,19 @@ const setAlternateText = function(event) {
         headerNameAlt.innerHTML = "github/abronkema";
     }
     if (event.target.id === "mail") {
-        headerNameAlt.innerHTML = "send your feedback";
+        headerNameAlt.innerHTML = "send me a note (copies my email to clipboard)";
+        // TODO: remove the note on copying once banner is created.
 }
     if (event.target.id === "twitter") {
-    headerNameAlt.innerHTML = "twitter/oh_hey_anthony";
+    headerNameAlt.innerHTML = "twitter/anthonybronkema";
 };
 };
+
+mailIcon.addEventListener("click", copyTextToClipboard);
 
 allIcons.forEach(function(el) {
     if (el.id == "mail") {
         el.addEventListener('click', function(el) {
-            console.log(`You clicked ${el.target.id}`);
         })
     }
         el.addEventListener('mouseover', function(event) {
