@@ -11,10 +11,9 @@ const resetHeaderNamePrimary = function() {
 function copyTextToClipboard() {
     var emailAddress = 'anthony.bronkema@gmail.com';
     navigator.clipboard.writeText(emailAddress).then(function() {
-        // TODO: Make a banner to confirm clipboard copy
-        console.log('Clipboard copied!')
+        headerNameAlt.innerHTML = "email addy saved to clipboard!"
     }, function() {
-        console.log('Clipboard failed to copy')
+        headerNameAlt.innerHTML = "copy to clipboard failed."
     })
 }
 
@@ -23,8 +22,7 @@ const setAlternateText = function(event) {
         headerNameAlt.innerHTML = "github/abronkema";
     }
     if (event.target.id === "mail") {
-        headerNameAlt.innerHTML = "send me a note (copies my email to clipboard)";
-        // TODO: remove the note on copying once banner is created.
+        headerNameAlt.innerHTML = "send me a note";
 }
     if (event.target.id === "twitter") {
     headerNameAlt.innerHTML = "twitter/anthonybronkema";
