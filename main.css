@@ -42,7 +42,11 @@ a:hover {
     background-color: yellow;
 }
 
-.tag {
+.narrative {
     font-size: .9rem;
     text-align: center;
+}
+
+.narrative_small {
+    font-size: .8rem;
 }
