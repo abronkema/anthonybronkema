@@ -9,7 +9,7 @@ const resetHeaderNamePrimary = function() {
 }
 
 function copyTextToClipboard() {
-    var emailAddress = 'anthony.bronkema@gmail.com';
+    var emailAddress = 'hey@anthonybronkema.com';
     navigator.clipboard.writeText(emailAddress).then(function() {
         headerNameAlt.innerHTML = "email addy saved to clipboard!"
     }, function() {
