@@ -4,7 +4,7 @@
 
 [anthonybronkema.com](https://www.anthonybronkema.com) is the live site.
 
-Thanks for visiting. This is new. There will be a lot of updates. 
+Thanks for visiting. I'm working on this as a means to put what I learn into practice. 
 
 If you're here to provide feedback, please use the Issues so I can track my progress. 
 
@@ -16,6 +16,6 @@ I'm really interested in specific feedback about:
 - markup errors or improvements
 - anything JavaScript. I have tons to learn here.
 
-Feel free to leave it in [issues](https://github.com/anthonybronkema/anthonybronkema/issues) (along with actual issues) on GitHub, [Twitter](https://www.twitter.com/anthonybronkema) (DM or @), or on my site's form.
+Feel free to leave it in [issues](https://github.com/anthonybronkema/anthonybronkema/issues) (along with actual issues) on GitHub.
 
 Thanks in advance!
