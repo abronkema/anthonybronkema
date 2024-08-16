@@ -24,9 +24,6 @@ const setAlternateText = function(event) {
     if (event.target.id === "mail") {
         headerNameAlt.innerHTML = "send me a note";
 }
-    if (event.target.id === "twitter") {
-    headerNameAlt.innerHTML = "twitter/anthonybronkema";
-};
 };
 
 mailIcon.addEventListener("click", copyTextToClipboard);
