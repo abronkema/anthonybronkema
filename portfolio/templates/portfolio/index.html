@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment %}
+    Portfolio Homepage Template
+
+    This template extends base.html and provides the content for the homepage.
+
+    Learning concepts:
+    - {% extends %}: Template inheritance from base.html
+    - {% block %}: Override blocks defined in parent template
+    - {{ variable }}: Output variables passed from the view
+    - {% static %}: Generate URLs for static files (CSS, JS, images)
+{% endcomment %}
+
+{% block title %}{{ name }}{% endblock %}
+
+{% block content %}
+<div class="flex_container">
+    <div class="header-icons">
+        {% comment %}
+            GitHub link
+            Using template variable {{ github_url }} from view context
+        {% endcomment %}
+        <a href="{{ github_url }}" target="_blank">
+            <i class="fas fa-code-branch icon" id="code"></i>
+        </a>
+
+        {% comment %}
+            Email icon (JavaScript handles the click-to-copy functionality)
+            data-email attribute is used by JavaScript
+        {% endcomment %}
+        <a href="#" data-email="{{ email }}">
+            <i class="far fa-paper-plane icon" id="mail"></i>
+        </a>
+    </div>
+
+    <div class="header">
+        {% comment %}
+            Primary header with name
+            JavaScript will toggle visibility between primary and alt
+        {% endcomment %}
+        <p class="header-name__primary">{{ name }}</p>
+        <p class="header-name__alt"></p>
+
+        {% comment %}
+            Netlify form (keeping for now, may remove later)
+            This was used for feedback but isn't currently active
+        {% endcomment %}
+        <form name="feedback" method="post" data-netlify="true">
+            <input type="text" name="feedback" id="feedbackInput" class="hide">
+        </form>
+    </div>
+
+    <div class="narrative">
+        {% comment %}
+            Main content area using template variables
+            These values are passed from the view in portfolio/views.py
+        {% endcomment %}
+        <p>I'm a {{ job_title }}</p>
+        <p>My focus areas are {{ job_description }}</p>
+        <p class="narrative_small">(There will eventually be more here, but reach out in the meantime)</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% comment %}
+    Load app.js using Django's static files system
+    This JavaScript handles hover effects and email copy functionality
+{% endcomment %}
+<script src="{% static 'portfolio/js/app.js' %}"></script>
+{% endblock %}

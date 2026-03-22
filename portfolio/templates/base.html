@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google Fonts: Space Mono -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
+
+    {% comment %}
+        Django static files tag
+        The static tag generates the URL for static files
+        In development: /static/portfolio/css/main.css
+        In production: /static/portfolio/css/main.abc123.css (with cache-busting hash)
+    {% endcomment %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/main.css' %}">
+
+    {% comment %} Block for page title - child templates can override this {% endcomment %}
+    <title>{% block title %}anthony bronkema{% endblock %}</title>
+</head>
+<body>
+    {% comment %} Block for main content - child templates insert content here {% endcomment %}
+    {% block content %}
+    {% endblock %}
+
+    {% comment %} Block for extra JavaScript - child templates can add page-specific JS {% endcomment %}
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>
